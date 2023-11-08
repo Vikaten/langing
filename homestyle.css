@@ -94,13 +94,16 @@ header {
     position: relative;
     color: #000;
     text-align: center;
+    text-transform: uppercase;
     font-family: 'Libre Baskerville', serif;
     font-size: 32px;
     top: 600px;
-    /* font-weight: 700; */
 }
 
-.image {
+
+/* оформление статичных картинок */
+
+/* .image {
     width: 240px;
     border: #000 2px solid;
 }
@@ -122,5 +125,75 @@ header {
     font-size: 20px;
     align-items: center;
     margin-top: 10px;
-}
+} */
 
+/* скролл картинок */
+
+#wrapper {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    top: 670px
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 485px;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+
+  .arrows {
+    display: flex;
+    position: absolute;
+    top: 330px;
+    gap: 40px;
+  }
+  
+  #next {
+    top: 50%;
+    left: 600px;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 60px;
+    grid-auto-flow: column;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    border: #000 2px solid;
+    background: #A2A485;
+    width: 240px;
+    height: 290px;
+  }
+  
